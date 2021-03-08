@@ -33,8 +33,8 @@
 
 body {
 	font-family: "Avenir Next", Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
-	color: #FFF;
-	background: #FFF;
+	color: #fff;
+	background: #fff;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-y: scroll;
@@ -44,7 +44,7 @@ body {
 
 a {
 	outline: none;
-	color: #F90;
+	color: #000;
 	text-decoration: none;
 }
 
@@ -84,7 +84,7 @@ button:focus {
 .codrops-header h1 span {
 	display: block;
 	padding: 0.5em 0 1em;
-	color: #FFF;
+	color: #999;
 	font-weight: normal;
 	font-size: 0.45em;
 	letter-spacing: 0;
@@ -106,7 +106,7 @@ button:focus {
 	left: 50%;
 	width: 1px;
 	height: 100%;
-	background:FFF;
+	background: rgba(255, 255, 255, 0.1);
 	content: '';
 	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
 	transform: rotate3d(0, 0, 1, 22.5deg);
@@ -216,7 +216,7 @@ body #cdawrap {
 }
 
 body #cdawrap .carbon-text {
-	color: #FFF;
+	color: #EBEBEB;
 }
 
 @media screen and (max-width: 50em) {

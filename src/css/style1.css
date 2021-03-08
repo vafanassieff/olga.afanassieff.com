@@ -11,7 +11,7 @@
 	top: 0;
 	left: 0;
 	pointer-events: none;
-	background: #FFF;
+	background: #252323 url(../img/loading.svg) no-repeat 50% 75px;
 	background-size: 60px auto;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
@@ -170,14 +170,14 @@
 	padding: 0;
 	cursor: pointer;
 	vertical-align: top;
-	color: #FFF;
+	color: #fff;
 	border: none;
 	background: none;
 }
 
 .action:hover,
 .action:focus {
-	color: #F2623E;
+	color: #fff;
 	outline: none;
 }
 
