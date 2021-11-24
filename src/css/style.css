@@ -111,17 +111,19 @@ Exclusively available here: https://themeforest.net/user/fourtabsthemes
 
 
 	/* Lato */
-	@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+	@import url(https://fonts.googleapis.com/css?family=Maitree:100,300,400,700,900);
 	
 	/* Quicksand */
-	@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700);
+	@import url(https://fonts.googleapis.com/css?family=Heebo:300,400,500,700);
 
 	
 	
 	
 /* Essential Styling
 -------------------------*/
+.video-responsive { overflow:hidden; padding-bottom:56.25%; position:relative; height:0;}
 
+.video-responsive iframe { left:0; top:0; height:100%; width:100%; position:absolute;}
 
 
 	*{
@@ -140,7 +142,7 @@ Exclusively available here: https://themeforest.net/user/fourtabsthemes
 		padding:0;
 		margin-left:0;
 		margin-right:0;
-		font-family: 'Quicksand', sans-serif;
+		font-family: 'Heebo', sans-serif;
 		-webkit-font-smoothing: antialiased;
 		text-align: center;
 		font-size: 1em;
@@ -198,7 +200,7 @@ Exclusively available here: https://themeforest.net/user/fourtabsthemes
 	
 
 	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-		font-family: 'Quicksand', sans-serif;
+		font-family: 'Heebo', sans-serif;
 		font-weight:100;
 		margin: 0px;
 		padding: 0px
@@ -206,7 +208,7 @@ Exclusively available here: https://themeforest.net/user/fourtabsthemes
 
 	p{
 		margin:0 0 5px;
-		font-family: 'Quicksand', sans-serif;
+		font-family: 'Heebo', sans-serif;
 		line-height: 1.8;
 	}
 
@@ -581,11 +583,11 @@ Exclusively available here: https://themeforest.net/user/fourtabsthemes
 
 
 	.lato{
-		font-family: 'Lato', sans-serif;
+		font-family: 'Maitree', sans-serif;
 	}
 	
 	.montserrat{
-		font-family: 'Quicksand', sans-serif;
+		font-family: 'Heebo', sans-serif;
 	}
 	
 
@@ -1732,7 +1734,19 @@ Exclusively available here: https://themeforest.net/user/fourtabsthemes
 
 /* Positioning
 -------------------------*/
-
+header-social
+	.content{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		-moz-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+	
 	
 	.content{
 		position: absolute;
