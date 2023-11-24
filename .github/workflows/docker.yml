@@ -1,33 +1,31 @@
-name: ci
+name: docker
 
 on:
   push:
     branches:
-      - "master"
+      - master
 
 jobs:
   docker:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
+      - uses: actions/checkout@v4
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+      - uses: docker/setup-qemu-action@v3
 
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
+      - uses: docker/setup-buildx-action@v3
+
+      - uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.CR_PAT }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push
-        id: docker_build
-        uses: docker/build-push-action@v2
+      - uses: docker/build-push-action@v5
         with:
+          context: .
           push: true
           tags: ghcr.io/vafanassieff/olga.afanassieff.com:latest
-
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
